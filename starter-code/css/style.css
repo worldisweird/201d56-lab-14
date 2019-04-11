@@ -1,1 +1,119 @@
 /* TODO: Make it awesome */
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  margin: 0;
+  width: 960px;
+  margin: 0 100px;
+  background-color: antiquewhite;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #808080;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+header, main, main section div, footer {
+  margin-top: 40px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header {
+  opacity: .5;
+}
+
+header h1, ul a {
+  color: #000;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+nav ul li {
+  margin-left: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+nav ul li span {
+  margin-left: 12px; 
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+ol li {
+  margin-top: 20px;
+}
+
+.card header h1 {
+  text-decoration: none;
+  font-size: 26px;
+}
+
+select {
+  height: 30px;
+}
+
+input, select {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #d1d1d1;
+  box-shadow: inset 0px 1px 8px #00000033;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: .18s ease-out;
+  margin: 5px 5px;
+}
+
+input:hover, select:hover {
+  box-shadow: inset 1px 2px 8px #00000005;
+}
+
+input:focus, select:focus {
+  color: #4b515d;
+  border: 1px solid #B8B6B6;
+  box-shadow: inset 1px 2px 4px #00000003, 0px 0px 8px #00000033;
+}
+
+button {
+  background: #a7ddcb;
+  float: right;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px 15px 5px;
+  box-shadow: inset 0px 1px 16px #00000033;
+  margin: 5px 5px;
+}
+
+button:hover {
+  box-shadow: inset 0px 1px 8px #00000033;
+}
+
+footer{
+  opacity: .5;
+}
+/* cart page */
+#cart th {
+  padding-right: 150px;
+}
