@@ -113,3 +113,8 @@ button:hover {
 footer{
   opacity: .5;
 }
+
+/* cart page */
+#cart th {
+  padding-right: 150px;
+}
