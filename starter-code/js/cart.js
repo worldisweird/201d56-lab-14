@@ -9,6 +9,8 @@ var cart;
 function loadCart() {
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
+
+
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -25,12 +27,29 @@ function clearCart() {}
 function showCart() {
 
   // TODO: Find the table body
-
+  const tableBody = document.getElementsByTagName('tbody')[0];
   // TODO: Iterate over the items in the cart
-  // TODO: Create a TR
-  // TODO: Create a TD for the delete link, quantity,  and the item
-  // TODO: Add the TR to the TBODY and each of the TD's to the TR
+  for (let i = 0; i < cart.items.length; i++) {
+    const removeIcon = 'X';
 
+    // TODO: Create a TR
+    let trEl = document.createElement('tr');
+
+    // TODO: Create a TD for the delete link, quantity,   and the item
+    let tdEl = document.createElement('td');
+    tdEl.textContent = removeIcon;
+    trEl.appendChild(tdEl);
+
+    tdEl = document.createElement('td');
+    tdEl.textContent = cart.items[i].quantity;
+    trEl.appendChild(tdEl);
+
+    tdEl = document.createElement('td');
+    tdEl.textContent = cart.items[i].product;
+    trEl.appendChild(tdEl);
+    // TODO: Add the TR to the TBODY and each of the TD's   to the TR
+    tableBody.appendChild(trEl);
+  }
 }
 
 function removeItemFromCart(event) {
